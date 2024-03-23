@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #066f7d;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.plain-button {
+    background: none;
+    border: none;
+    color: blue; /* Change the color as desired */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.add-member-button {
+    background-color: #066f7d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.add-member-button:hover {
+    background-color: #078090;
+}
+
+.add-member-button:active {
+    background-color: #066f7d;
+}
+
+.clickable-row {
+    cursor: pointer;
+    background-color: #f0f0f0; /* Change the background color as desired */
+}
+
+.clickable-row:hover {
+    background-color: #e0e0e0; /* Change the hover color as desired */
+}
+
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}

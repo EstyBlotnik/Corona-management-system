@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Information</title>
+    <link rel="stylesheet" type="text/css" href="table.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Members Information</h1>
+        <form id="addMember" action="/member/add" method="POST">
+            <button id="addMemberButton" class="add-member-button">Add a New Member</button>
+            <input id="firstNameInput" type="hidden">
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Identity Number</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% members.forEach(function(member) { %>
+                    <tr class="clickable-row"></tr>
+                        <td><%=member.firstName %></td>
+                        <td><%=member.lastName %></td>
+                        <td><%=member.IdentityNumber %></td>
+                        <td>
+                            <form id="memberDetailsForm" action="/member/details" method="POST">
+                                <button type="details" class="plain-button">
+                                    More details
+                                </button>
+                                <input type="hidden" name="_id" value="<%=member._id %>">
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>    
+</body>
+</html>

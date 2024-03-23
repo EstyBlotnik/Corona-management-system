@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal and COVID-19 Details</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .details {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            width: 150px; /* Adjust as needed */
+            margin-right: 10px;
+        }
+
+        p {
+            color: #333;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1><%=member.firstName %> <%=member.lastName%>'s Details</h1>
+        <div class="details">
+            <h2>Personal Details</h2>
+            <label for="fullName">Full Name:</label><p id="fullName"><%=member.firstName %> <%=member.lastName%></p><br>
+            <label for="idCard">Identity Card:</label><p id="idCard"><%=member.IdentityNumber %> </p><br>
+            <label for="address">Address:</label><p id="address">City: <%=member.residenceCity %>, Street: <%=member.street %> <%=member.houseNumber %></p><br>
+            <label for="dob">Date of Birth:</label><p id="dob"><%=member.dateOfBirth.toDateString() %></p><br>
+            <% if(member.phoneNumber){ %>
+                <label for="telephone">Telephone:</label><p id="telephone"><%=member.phoneNumber %></p><br>
+            <% } %>
+            <label for="mobile">Mobile Phone:</label><p id="mobile"><%=member.MobilePhone %></p><br>
+        </div>
+        <div class="details">
+            <h2>COVID-19 Details</h2>
+            <%member.vaccines.forEach(function(vaccine) {%>
+                <label for="vaccine">Vaccine:</label>
+                <p id="vaccine1"><%=vaccine.producer%></p>
+                <label for="vaccine1Date">Date Received:</label>
+                <p id="vaccine1Date"><%=vaccine.date%></p>
+            <% }) %>
+            <label for="recoveryDate">Date of Recovery:</label>
+            <p id="recoveryDate">April 5, 2023</p>
+        </div>
+        <form id="userDetailsForm" action="/member/delete" method="DELETE"></form>
+            <button class="delete-button delete" onclick="confirmDelete()" data-doc="<%= member._id %>">Delete member</button>
+            <input type="hidden" name="_id" value="<%=member._id %>">
+        </form>
+    </div>
+    <script>
+        function confirmDelete() {
+            if (confirm("Are you sure you want to delete this record?")) {
+                const trashcan = document.querySelector('button.delete');
+                console.log(trashcan);
+                const endpoint = `/member/delete/${trashcan.dataset.doc}`;
+                fetch(endpoint, {
+                    method: 'DELETE',
+                })
+                .then(response => response.json())
+                .then(data => window.location.href = data.redirect)
+                .catch(err => console.log(err));
+                alert(trashcan.dataset.doc);
+            }
+        }
+    </script>
+</body>
+</html>
