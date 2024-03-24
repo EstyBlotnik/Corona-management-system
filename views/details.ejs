@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal and COVID-19 Details</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
     <style>
         body {
             display: flex;
@@ -43,8 +42,29 @@
             color: #333;
             display: inline-block;
         }
-    </style>
+        .button-container {
+            display: flex;
+            justify-content: space-between; /* Adjust as needed */
+            align-items: center;
+        }
+        .delete-button {
+            background-color: #066f7d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
+        .delete-button:hover {
+        background-color: #078090;
+        }
+        .delete-button,
+        .edit-button {
+            margin-right: 10px; /* Adjust as needed */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -71,16 +91,19 @@
             <label for="recoveryDate">Date of Recovery:</label>
             <p id="recoveryDate">April 5, 2023</p>
         </div>
-        <form id="userDetailsForm" action="/member/delete" method="DELETE"></form>
+        <div class="button-container">
             <button class="delete-button delete" onclick="confirmDelete()" data-doc="<%= member._id %>">Delete member</button>
             <input type="hidden" name="_id" value="<%=member._id %>">
-        </form>
+            <form id="userDetailsForm" action="/member/edit" method="POST">
+                <button class="delete-button edit" data-doc="<%= member._id %>">Edit member</button>
+                <input type="hidden" name="_id" value="<%=member._id %>">
+            </form>
+        </div>
     </div>
     <script>
         function confirmDelete() {
             if (confirm("Are you sure you want to delete this record?")) {
                 const trashcan = document.querySelector('button.delete');
-                console.log(trashcan);
                 const endpoint = `/member/delete/${trashcan.dataset.doc}`;
                 fetch(endpoint, {
                     method: 'DELETE',
