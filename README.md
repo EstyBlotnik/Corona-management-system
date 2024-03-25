@@ -28,8 +28,8 @@ In order to run the program on your computer, please do the following in order:
 5. Run the project ```npm run dev```.
 6. You have to see this:<br />
 ![image](https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/278bb2c8-337b-447b-bca2-5c38ec5b610c)
-# kk
-Now that the server is working, we will connect to it via localhost:3000:
+# How to use our service
+Now that the server is working, we will connect to it via ```localhost:3000```:
 
 # Demo
 ![image](https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/e9d5c92a-5410-4a89-9370-a41f35dc0849)
