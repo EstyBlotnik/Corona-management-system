@@ -32,9 +32,9 @@ In order to run the program on your computer, please do the following in order:
 Now that the server is working, we will connect to it via ```localhost:3000```:
 This will open the main page that shows us the names of all the members of the health fund and their ID number:
 ![image](https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/4578482c-b3c2-4d3f-9329-a2836ad57ddf)
-Now click on "Add a new member":
+Now click on "Add a new member":<br>
 <img width="575" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/14f75dff-2fbc-468e-a890-9d4c9a837458">
-<img width="549" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1bc6a2d5-0823-4d91-bbde-462af63f26a6">
+<img width="950" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/435f8122-6c7e-46d9-8c34-4b7b77c50443">
 
 
 
