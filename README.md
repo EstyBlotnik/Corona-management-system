@@ -27,7 +27,7 @@ In order to run the program on your computer, please do the following in order:
 4. Install the dependencies ```npm install```.
 5. Run the project ```npm run dev```.
 6. You have to see this:
-7.  ![image](https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/278bb2c8-337b-447b-bca2-5c38ec5b610c).
+![image](https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/278bb2c8-337b-447b-bca2-5c38ec5b610c)
 # kk
 Now that the server is working, we will connect to it via localhost:3000:
 
