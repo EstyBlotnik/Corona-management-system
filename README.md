@@ -6,7 +6,7 @@ editing and deleting them, and manages the records in the database.
 # 💼 Languages and Tools
 ### Languages: <br />
 #### Client side:<br />
-  * JavaScript <br />
+  * JavaScript <br /> ![image](https://camo.githubusercontent.com/ce14cdf2acbfe20f33ee78f613c7af10daef338b7d03e81831467c9fb9871aac/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d6a6176617363726970742d4637444631453f267374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d626c61636b).
   * Css <br />
   * HTML <br />
 #### Server side: <br />
