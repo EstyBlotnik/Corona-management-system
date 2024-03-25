@@ -39,6 +39,7 @@ A page will open for us where we need to fill in the personal details of the new
 Let's fill in details for that new member:<br>
 <img width="956" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/7914fb50-0929-40c0-a43c-52a65ebde2f7">
 <img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1c01b834-be6c-4ca7-a412-24f93505cd9d">
+Now press "submit":<br>
 
 
 
