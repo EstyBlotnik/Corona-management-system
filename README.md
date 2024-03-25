@@ -36,9 +36,9 @@ Now click on "**Add a new member**":<br>
 A page will open for us where we need to fill in the personal details of the new member we want to add:<br>
 <img width="575" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/14f75dff-2fbc-468e-a890-9d4c9a837458">
 <img width="577" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/2d3bed14-34b0-4690-a6dd-60bd1a70e1db">
-Let's fill in details for that new member:
-<img width="580" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/b058d4d5-2013-433f-a713-560e25d6a565">
-<img width="584" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1d63727c-ee85-454f-8868-b956fa08c700">
+Let's fill in details for that new member:<br>
+<img width="956" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/7914fb50-0929-40c0-a43c-52a65ebde2f7">
+<img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1c01b834-be6c-4ca7-a412-24f93505cd9d">
 
 
 
