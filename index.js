@@ -24,6 +24,36 @@ app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });    
 
+const memberController = require('./controllers/memberController')
+const bodyParser = require('body-parser');
+const path = require('path');
+const multer = require('multer');
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: true }));
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'public/uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname));
+    }
+  });
+  
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, path.join(__dirname, 'public', 'uploads')); // תיקייה בה התמונות יאוחסנו
+//     },
+//     filename: (req, file, cb) => {
+//     // שמירת הקובץ עם שם ייחודי למניעת קונפליקטים
+//     //אולי לשמור את שם הקובץ לפי השם של תעודת הזהות של הלקוח או משהו דומה
+//     cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+//     }
+// });
+
+const upload = multer({ storage: storage });
+app.post('/member/add/details', upload.single('image'), memberController.addMember);
+
+
 app.use('/member', memberRoutes);
 app.use('/', routes);
 app.use((req,res)=>{

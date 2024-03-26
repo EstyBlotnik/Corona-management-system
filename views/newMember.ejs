@@ -41,17 +41,33 @@
             box-sizing: border-box;
         }
 
-        button {
-            width: calc(100% - 20px); /* Calculate width to accommodate padding */
-            padding: 10px;
-            margin-top: 10px;
+        .delete-button {
+            background-color: #066f7d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
+
+        .delete-button:hover {
+        background-color: #078090;
+        }
+        .submit{
+            margin: 0 auto;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Member Details</h1>
-        <form id="userDetailsForm" action="/member/add/details" method="POST">
+        <h1>Add a member</h1>
+        <form id="userDetailsForm" action="/" method="GET">
+            <button class="delete-button back-button">Back</button>
+        </form>
+        <br>
+        <form id="userDetailsForm" action="/member/add/details" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Personal Details</legend>
                 <div class="form-group">
@@ -79,7 +95,7 @@
                 </div>
                 <div class="form-group">
                     <label for="houseNumber">House number:</label>
-                    <input type="text" id="houseNumber" name="houseNumber">
+                    <input type="number" id="houseNumber" name="houseNumber">
                 </div>
                 <div class="form-group">
                     <label for="dob">Date of Birth:</label>
@@ -94,7 +110,8 @@
                     <input type="tel" id="mobile" name="MobilePhone" required>
                 </div>
             </fieldset>
-            <button type="submit">Submit</button>
+            <br>
+            <button class="delete-button submit" type="submit">Submit</button>
         </form>
     </div>
 </body>

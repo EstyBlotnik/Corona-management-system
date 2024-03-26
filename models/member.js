@@ -47,6 +47,9 @@ const memberSchema = new mongoose.Schema({
   },
   recoveryDate:{
     type: Date,
+  },
+  imagePath: {
+    type: String, // Changed to String for file path
   }
 });
 

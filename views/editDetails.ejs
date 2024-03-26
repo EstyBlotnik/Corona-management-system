@@ -43,11 +43,28 @@
             color: #333;
             display: inline-block;
         }
+        .delete-button {
+            background-color: #066f7d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-button:hover {
+        background-color: #078090;
+        }
     </style>
 
 </head>
 <body>
     <div class="container">
+        <form id="memberDetailsForm" action="/member/details" method="POST">
+            <button class="delete-button back-button">Back</button>
+            <input type="hidden" name="_id" value="<%=member._id %>">
+        </form>
         <h1>Edit <%=member.firstName %> <%=member.lastName%>'s Details</h1>
         <div class="details">
             <form id="userDetailsForm" action="/member/edit/save" method="POST">
