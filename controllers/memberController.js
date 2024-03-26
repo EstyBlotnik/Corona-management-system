@@ -1,7 +1,5 @@
 const Member = require('../models/member');
 const Vaccine= require('../models/vaccine');
-const path = require('path'); 
-const multer = require('multer');
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
@@ -31,7 +29,8 @@ const editMember=async (req,res)=>{
     )
     .then(updatedMember=> {
         console.log(updatedMember);
-        res.status(200).render('details', { member: updatedMember })
+        const vaccines = Vaccine.find({ _id: { $in: updatedMember.vaccines } });
+        res.status(200).render('details', { member: updatedMember ,vaccines:vaccines});
       })
       .catch(error => {
         console.error(error);
@@ -47,9 +46,7 @@ const memberDetails = async (req,res)=>{ //to get a specific member
 };
 
 const deleteMember= async (req,res)=>{
-    console.log('/delete/:id');
     const redirectUrl =  '/';
-    const id = req.params.id;
     console.log(id);
     Member.findByIdAndDelete(id)
         .then(result => {
@@ -59,19 +56,6 @@ const deleteMember= async (req,res)=>{
             console.log(err);
         });
 };
-
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-    cb(null, 'uploads/') // תיקייה בה התמונות יאוחסנו
-    },
-    filename: (req, file, cb) => {
-    // שמירת הקובץ עם שם ייחודי למניעת קונפליקטים
-    //אולי לשמור את שם הקובץ לפי השם של תעודת הזהות של הלקוח או משהו דומה
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-    }
-});
-
-const upload = multer({ storage: storage });
 
 const addMember = async (req,res)=>{
     const member=new Member(req.body);
@@ -85,28 +69,6 @@ const addMember = async (req,res)=>{
     });
 };
 
-// const addMember = async (req, res) => {
-//     // בדיקה שקובץ תמונה הועלה באמת
-//     if (req.file) {
-//         // הוספת הנתיב של התמונה לאובייקט שישמר בבסיס הנתונים
-//         req.body.imagePath = req.file.path;
-//         console.log(req.body.imagePath)
-//     }
-//     console.log(req.body);
-//     // יצירת רשומה חדשה במודל Member עם הנתונים שהתקבלו מהטופס והנתיב של התמונה
-
-//     const member = new Member(req.body);
-
-//     try {
-//         await member.save(); // שמירת הרשומה החדשה בבסיס הנתונים
-//         const vaccines = Vaccine.find({ _id: { $in: member.vaccines } });
-//         res.status(200).render('details', { member: member ,vaccines:vaccines});
-//         // res.redirect('/some-success-page'); // הפניה לדף אחר לאחר השמירה בהצלחה
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).send('Server Error'); // שליחת שגיאה במקרה של כישלון
-//     }
-// };
 
 const addRecoveryDate= async (req,res)=>{
     const {recoveryDate,_id} = req.body;

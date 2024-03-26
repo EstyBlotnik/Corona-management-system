@@ -100,7 +100,7 @@
                 <% }%>
                 <% vaccines.forEach(function(vaccine) { %>
                     <label for="vaccine">Vaccine:</label>
-                    <p id="vaccine1"><%= vaccine.producer %></p>
+                    <p id="vaccine1"><%= vaccine.producer %></p> <br>
                     <label for="vaccine1Date">Date Received:</label>
                     <p id="vaccine1Date"><%=vaccine.date.toDateString()%></p><br>
                 <% }) %>
@@ -116,9 +116,10 @@
             <h3>positive result:</h3>
             <% if (member.receivinPositiveResult) { %>
                 <label for="positiveResult">Date of positive result:</label>
-                <p id="positiveResult"><%= member.receivinPositiveResult.toDateString() %></p>
+                <p id="positiveResult"><%= member.receivinPositiveResult.toDateString() %><br></p><br>
+                <h3>date of recovery:</h3>
                 <% if (member.recoveryDate) { %>
-                    <br><label for="recoveryDate">Date of recovery:</label>
+                    <label for="recoveryDate">Date of recovery:</label>
                     <p id="recoveryDate"><%= member.recoveryDate.toDateString() %></p>
                 <% } else { %>
                     <p>This member has not yet recovered from the disease, to add a recovery date,</p><br><p> select a date and press 'add date'</p>
@@ -162,7 +163,7 @@
                 .then(response => response.json())
                 .then(data => window.location.href = data.redirect)
                 .catch(err => console.log(err));
-                alert(trashcan.dataset.doc);
+                alert('User deleted successfully');
             }
         }
     </script>
