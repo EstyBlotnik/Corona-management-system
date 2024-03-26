@@ -42,6 +42,19 @@ Example of filling in details:<br>
 <img width="956" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/7914fb50-0929-40c0-a43c-52a65ebde2f7">
 <img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1c01b834-be6c-4ca7-a412-24f93505cd9d">
 Now press "submit":<br>
+<img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/fced77d5-d607-47c2-8b65-79556de836ae">
+<img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/5713ff58-fa1f-4bcb-b665-01b139a04279">
+Member successfully added!
+By pressing solve back you can return to the main page.
+<img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ef071f30-9646-43f4-96ad-0e41b3305b2c">
+## Viewing member details:
+From the main page you can view a member's details by tapping on "more details":
+<img width="634" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/c5c6ea3e-8422-4fdf-a2f6-2748e0acccac">
+
+<img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/33e5ebfd-23b5-47e8-b5c1-af26a8090df5">
+
+
+
 
 
 
