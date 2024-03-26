@@ -1,4 +1,4 @@
-<img width="920" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/c7ace0a5-cf79-47a2-a994-ca88f658653d"># Corona-management-system
+# Corona-management-system
 # Description
 This system is a Corona database management system for a large health fund.
 The system shows the members of the health insurance fund, allows
