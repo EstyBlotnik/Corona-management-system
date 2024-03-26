@@ -29,17 +29,20 @@ In order to run the program on your computer, please do the following in order:
 6. You have to see this:<br />
 ![image](https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/278bb2c8-337b-447b-bca2-5c38ec5b610c)
 # How to use our service
+## connection:
 Now that the server is working, we will connect to it via ```localhost:3000```:
 This will open the main page that shows us the names of all the members of the health fund and their ID number:
 ![image](https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/4578482c-b3c2-4d3f-9329-a2836ad57ddf)
-Now click on "**Add a new member**":<br>
-A page will open for us where we need to fill in the personal details of the new member we want to add:<br>
+## Add a new member:
+To add a new member tap on "**Add a new member**":<br>
+A page will open to you where you need to fill in the personal details of the new member we want to add:<br>
 <img width="575" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/14f75dff-2fbc-468e-a890-9d4c9a837458">
 <img width="577" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/2d3bed14-34b0-4690-a6dd-60bd1a70e1db">
-Let's fill in details for that new member:<br>
+Example of filling in details:<br>
 <img width="956" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/7914fb50-0929-40c0-a43c-52a65ebde2f7">
 <img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1c01b834-be6c-4ca7-a412-24f93505cd9d">
 Now press "submit":<br>
+
 
 
 
