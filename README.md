@@ -52,6 +52,15 @@ From the main page you can view a member's details by tapping on "more details":
 <img width="634" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/c5c6ea3e-8422-4fdf-a2f6-2748e0acccac">
 
 <img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/33e5ebfd-23b5-47e8-b5c1-af26a8090df5">
+## Adding vaccine information:
+To add information about a vaccine, click on "add a vaccine"
+Then a page will open where you can fill in the vaccination details: <br>
+<img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/c3a43502-93b0-4f1f-b59d-9bb90276c20b">
+Enter details. For example: <br>
+<img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/cbc18925-dc7b-44df-923b-f0973add4eb8">
+and then tap on"submit":<br>
+You can see that the addition was successful:
+<img width="920" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/5e082aed-9cf4-4a1c-b2f1-e9ee407c9c11">
 
 
 
