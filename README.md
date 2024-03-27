@@ -37,7 +37,8 @@ This will open the main page that shows us the names of all the members of the h
 To add a new member tap on "**Add a new member**":<br>
 A page will open to you where you need to fill in the personal details of the new member we want to add:<br>
 <img width="947" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/6bae732d-c50b-4e77-995c-08d5162f163d">
-<img width="949" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/95cd435e-0df9-4343-919e-eb372e291684"> <br />
+<img width="950" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ee47d5ae-55e7-4478-98d0-d772fcd731bd">
+ <br />
 Example of filling in details:<br>
 <img width="956" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/7914fb50-0929-40c0-a43c-52a65ebde2f7">
 <img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1c01b834-be6c-4ca7-a412-24f93505cd9d"> <br />
