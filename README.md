@@ -40,11 +40,13 @@ A page will open to you where you need to fill in the personal details of the ne
 <img width="950" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ee47d5ae-55e7-4478-98d0-d772fcd731bd">
  <br />
 Example of filling in details:<br>
-<img width="956" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/7914fb50-0929-40c0-a43c-52a65ebde2f7">
-<img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1c01b834-be6c-4ca7-a412-24f93505cd9d"> <br />
+<img width="947" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ce762b7a-a6ce-4467-b2a6-6bcc41467bac">
+<img width="948" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/bd7f21ec-8052-4857-9df6-c0733646a7a5">
+<br />
 Now press "submit":<br />
-<img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/fced77d5-d607-47c2-8b65-79556de836ae">
-<img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/5713ff58-fa1f-4bcb-b665-01b139a04279"> <br />
+<img width="949" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/376e9678-dfc2-4186-96f4-2a716d0d8bb6">
+<img width="948" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/c31a5245-f312-4a24-a6a5-62692d0ff725">
+<br />
 Member successfully added!
 By pressing solve back you can return to the main page.
 <img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ef071f30-9646-43f4-96ad-0e41b3305b2c"> <br />
