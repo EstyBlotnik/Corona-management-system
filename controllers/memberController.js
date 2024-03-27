@@ -4,7 +4,8 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({ extended: true }));
-//editMember, memberDetails, addMember, deleteMember,getEditPage
+//editMember, memberDetails, deleteMember, addMember, addRecoveryDate, addPositiveResult, getEditPage, 
+//getAddPage, getAllMembersPage, getAddVaccinePage, addVaccine
 const editMember=async (req,res)=>{
     console.log(req.body);
     console.log(req.body['_id']);
@@ -78,7 +79,6 @@ const addMember = async (req,res)=>{
     }
 };
 
-
 const addRecoveryDate= async (req,res)=>{
     const {recoveryDate,_id} = req.body;
     console.log(recoveryDate,_id);
@@ -125,7 +125,6 @@ const addPositiveResult = async (req,res)=>{
       });
 };
 
-
 const getEditPage= async (req,res)=>{
     const _id = req.body['_id'];
     const member = await Member.findById(_id);
@@ -169,7 +168,6 @@ const addVaccine = async (req,res)=>{
     const vaccines = await Vaccine.find({ _id: { $in: member.vaccines } });
     res.render('details', { member: member ,vaccines:vaccines});
 };
-
 
 module.exports={
     memberDetails, 

@@ -17,7 +17,6 @@
 
         .container {
             max-width: 960px;
-            min-width: 750px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -67,21 +66,64 @@
         .edit-button {
             margin-right: 10px; /* Adjust as needed */
         }
+        .profile-frame {
+            width: 150px; /* Adjust size as needed */
+            height: 150px; /* Adjust size as needed */
+            border-radius: 50%; /* Makes the frame circular */
+            background-color: #066f7d; /* Frame color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensures the picture stays within the frame */
+            position: relative;
+        }
+        .profile-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('path_to_your_frame_image.jpg') center/cover no-repeat; /* Replace 'path_to_your_frame_image.jpg' with the actual path to your frame image */
+            z-index: -1;
+        }
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Keeps the picture circular */
+        }
+        .image-container {
+            margin-left: 20px; /* Adjust as needed */
+            position: relative; /* Allows absolute positioning inside */
+            }
+
+        .image-container img {
+            width: 150px; /* Adjust size as needed */
+            height: 150px; /* Adjust size as needed */
+            border-radius: 50%; /* Makes the image circular */
+            border: 2px solid #066f7d; /* Border color */
+            position: absolute; /* Positions the image inside the container */
+            top: 50%; /* Moves the image down by half its height */
+            left: 50%; /* Moves the image right by half its width */
+            transform: translate(-50%, -50%); /* Centers the image within the container */
+        }
     </style>
 </head>
 <body>
+    
     <div class="container">
-        <h1><%=member.firstName %> <%=member.lastName%>'s Details</h1>
         <form id="userDetailsForm" action="/" method="GET">
             <button class="delete-button back-button">Back</button>
-        </form>
+        </form><br>
+        <h1><%=member.firstName %> <%=member.lastName%>'s Details</h1>
+        <% if(member.imagePath) { %>
+            <div class="image-container profile-frame">
+                <img src="http://localhost:3000<%=member.imagePath %>" alt="Member Image" style="width:150px; height:auto;">
+            </div>
+        <% } %>
         <div class="details">
             <h2>Personal Details</h2>
-            <% if(member.imagePath) { %>
-                <div class="image-container">
-                    <img src="http://localhost:3000<%=member.imagePath %>" alt="Member Image" style="width:150px; height:auto;">
-                </div>
-            <% } %>
              
             <label for="fullName">Full Name:</label><p id="fullName"><%=member.firstName %> <%=member.lastName%></p><br>
             <label for="idCard">Identity Card:</label><p id="idCard"><%=member.IdentityNumber %> </p><br>
@@ -105,15 +147,15 @@
                     <label for="vaccine1Date">Date Received:</label>
                     <p id="vaccine1Date"><%=vaccine.date.toDateString()%></p><br>
                 <% }) %>
-                <% if (member.vaccines.length<4) { %>
-                    <form id="userDetailsForm" action="/member/addVaccine" method="POST">
-                        <button class="delete-button" >add a vaccine</button>
-                        <input type="hidden" name="_id" value="<%=member._id %>">
-                    </form>
-                <% }%>
             <% } else { %>
                 <p>This member has not yet been vaccinated</p><br>
             <% } %>
+            <% if (vaccines && Array.isArray(vaccines)||member.vaccines.length<4) { %>
+                <form id="userDetailsForm" action="/member/addVaccine" method="POST">
+                    <button class="delete-button" >add a vaccine</button>
+                    <input type="hidden" name="_id" value="<%=member._id %>">
+                </form>
+            <% }%>
             <h3>positive result:</h3>
             <% if (member.receivinPositiveResult) { %>
                 <label for="positiveResult">Date of positive result:</label>

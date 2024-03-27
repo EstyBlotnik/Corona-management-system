@@ -4,8 +4,6 @@ const bodyParser = require('body-parser');
 const memberController=require('../controllers/memberController');
 const multer = require('multer');
 const path = require('path');
-const Member=require('../models/member')
-const Vaccine = require('../models/vaccine')
 
 router.use(bodyParser.urlencoded({ extended: true }));
 const storage = multer.diskStorage({
