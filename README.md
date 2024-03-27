@@ -36,14 +36,17 @@ This will open the main page that shows us the names of all the members of the h
 ## Add a new member:
 To add a new member tap on "**Add a new member**":<br>
 A page will open to you where you need to fill in the personal details of the new member we want to add:<br>
-<img width="945" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/a7eccade-b28a-4c6f-8309-c19e2c582ad3">
-<img width="949" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/95cd435e-0df9-4343-919e-eb372e291684"> <br />
+<img width="947" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/6bae732d-c50b-4e77-995c-08d5162f163d">
+<img width="950" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ee47d5ae-55e7-4478-98d0-d772fcd731bd">
+ <br />
 Example of filling in details:<br>
-<img width="956" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/7914fb50-0929-40c0-a43c-52a65ebde2f7">
-<img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/1c01b834-be6c-4ca7-a412-24f93505cd9d"> <br />
+<img width="947" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ce762b7a-a6ce-4467-b2a6-6bcc41467bac">
+<img width="948" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/bd7f21ec-8052-4857-9df6-c0733646a7a5">
+<br />
 Now press "submit":<br />
-<img width="959" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/fced77d5-d607-47c2-8b65-79556de836ae">
-<img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/5713ff58-fa1f-4bcb-b665-01b139a04279"> <br />
+<img width="949" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/376e9678-dfc2-4186-96f4-2a716d0d8bb6">
+<img width="948" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/c31a5245-f312-4a24-a6a5-62692d0ff725">
+<br />
 Member successfully added!
 By pressing solve back you can return to the main page.
 <img width="960" alt="image" src="https://github.com/EstyBlotnik/Corona-management-system/assets/118099586/ef071f30-9646-43f4-96ad-0e41b3305b2c"> <br />
