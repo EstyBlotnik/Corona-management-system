@@ -4,7 +4,6 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({ extended: true }));
-
 //editMember, memberDetails, addMember, deleteMember,getEditPage
 const editMember=async (req,res)=>{
     console.log(req.body);
@@ -46,6 +45,7 @@ const memberDetails = async (req,res)=>{ //to get a specific member
 };
 
 const deleteMember= async (req,res)=>{
+    const id = req.params.id;
     const redirectUrl =  '/';
     console.log(id);
     Member.findByIdAndDelete(id)
@@ -58,15 +58,24 @@ const deleteMember= async (req,res)=>{
 };
 
 const addMember = async (req,res)=>{
-    const member=new Member(req.body);
-    await member.save()
-    .then((result)=>{
-        const vaccines = Vaccine.find({ _id: { $in: result.vaccines } });
-        res.render('details', { member: result ,vaccines:vaccines});
-    })
-    .catch((err)=>{
-        console.error('Error:', err);
-    });
+    if (req.file) {
+        // Adding the path of the image to the object that will be stored in the base
+        const imagePath = '/uploads/'+req.file.filename;
+        req.body.imagePath = imagePath;
+    }
+
+    // Creating a new record in the Member model with the data received from the form and the image path
+    const member = new Member(req.body);
+    console.log(member);
+
+    try {
+        await member.save();
+        const vaccines = Vaccine.find({ _id: { $in: member.vaccines } });
+        res.status(200).render('details', { member: member ,vaccines:vaccines});
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Server Error'); // שליחת שגיאה במקרה של כישלון
+    }
 };
 
 

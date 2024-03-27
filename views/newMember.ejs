@@ -64,13 +64,17 @@
 <body>
     <div class="container">
         <h1>Add a member</h1>
-        <form id="userDetailsForm" action="/" method="GET">
+        <form id="userDetails" action="/" method="GET">
             <button class="delete-button back-button">Back</button>
         </form>
         <br>
         <form id="userDetailsForm" action="/member/add/details" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Personal Details</legend>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image" placeholder="Image:"  accept="image/*"><br><br>
+                </div>
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" name="firstName" required>
@@ -81,14 +85,14 @@
                 </div>
                 <div class="form-group">
                     <label for="idCard">Identity Card:</label>
-                    <input type="number" id="idCard" name="IdentityNumber" required>
+                    <input type="number" id="IdentityNumber" name="IdentityNumber" required>
                 </div>
                 <div class="form-group">
                     <label for="address">Address:</label>
                 </div>
                 <div class="form-group">
                     <label for="city">City:</label>
-                    <input type="text" id="city" name="residenceCity" required>
+                    <input type="text" id="residenceCity" name="residenceCity" required>
                 </div>
                 <div class="form-group">
                     <label for="street">Street:</label>
@@ -100,20 +104,20 @@
                 </div>
                 <div class="form-group">
                     <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" name="dateOfBirth" required>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
                 </div>
                 <div class="form-group">
                     <label for="telephone">Telephone:</label>
-                    <input type="tel" id="telephone" name="phoneNumber">
+                    <input type="tel" id="phoneNumber" name="phoneNumber">
                 </div>
                 <div class="form-group">
                     <label for="mobile">Mobile Phone:</label>
-                    <input type="tel" id="mobile" name="MobilePhone" required>
+                    <input type="tel" id="MobilePhone" name="MobilePhone" required>
                 </div>
             </fieldset>
             <br>
             <button class="delete-button submit" type="submit">Submit</button>
         </form>
-    </div>
+    </div>   
 </body>
 </html>
